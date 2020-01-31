@@ -1,6 +1,6 @@
 ## Tabby-native
 
-Native port for Tabby electron app made with **React Native**
+Tabby electron app Native port made with **React Native**
 
 (Build is available for **Android**)
 
