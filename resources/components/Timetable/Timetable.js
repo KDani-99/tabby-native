@@ -86,7 +86,7 @@ class Timetable extends React.Component
                     }
                     {
                         data.length !== 0 && data.map((elem,index)=>{
-                            return /*this.state.data[elem].length !== 0 &&*/ <Day day={elem} content={this.state.data[elem]} key={`day#${index}`} openWindow={this.showAddWindow} remove={this.remove}/>
+                            return <Day day={elem} content={this.state.data[elem]} key={`day#${index}`} openWindow={this.showAddWindow} remove={this.remove}/>
                         })
                     }
                 </ScrollView>
@@ -94,9 +94,6 @@ class Timetable extends React.Component
                     <Icon name='plus-outline' width={28} height={28} fill={'white'}/>
                 </Ripple>
                 {this.state.showAdd && <InputWindow selectedTheme={this.state.selectedTheme} editData={this.state.editData} close={this.showAddWindow} add={this.add} selectedWeek={this.state.selectedWeek}/>}
-                {/*<View style={style.editContainer}>
-                    {this.state.showEdit && <EditPanel selectedTheme={this.state.selectedTheme}/>}
-                </View>*/}
             </Animated.View>
         );
     }
