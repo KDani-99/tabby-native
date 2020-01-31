@@ -37,4 +37,4 @@ To add your own language:
   7. Make a fork of the repo, upload your translation and make a pull request or email us with the translation file and we will add it.
 
 ## Bugs
-  Please create an issue if you've found a bug. 
+  Please open an issue if you've found a bug. 
