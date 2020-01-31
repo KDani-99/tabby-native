@@ -24,7 +24,7 @@ To add your own language:
   Your import would look like:
   ```import <code> from '../../<your_filename>.json';```  
   6. Add your imported language to the languages object
-  ```
+  ```js
   languages:{
         en,
         <code> // your imported language
