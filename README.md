@@ -5,7 +5,7 @@ Native port for Tabby electron app made with **React Native**
 (Build is available for **Android**)
 
 ## Screenshots
-![Screenshot 3](/resources/screenshots/screenshot-2.png | width=100px)
+![Screenshot 3](/resources/screenshots/screenshot-2.png)
 ![Screenshot 1](/resources/screenshots/screenshot.png)
 ![Screenshot 2](/resources/screenshots/screenshot-1.png)
 ![Screenshot 4](/resources/screenshots/screenshot-3.png)
