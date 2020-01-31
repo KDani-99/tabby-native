@@ -1,0 +1,19 @@
+{
+    "menu":{
+        "timetable":{
+            "header":"Timetable",
+            "description":"You can see your weekly schedule here"
+        },
+        "tasks":{
+            "header":"Tasks",
+            "description":"You can create and see your tasks here (Long press to delete one)"
+        },
+        "settings":{
+            "header":"Settings",
+            "description":"You can change your preferences here",
+            "selectedWeek":"Selected Week",
+            "language":"Language",
+            "theme":"Theme"
+        }
+    }
+}

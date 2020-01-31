@@ -1,0 +1,16 @@
+{
+    "menu":{
+        "timetable":{
+            "header":"",
+            "description":""
+        },
+        "tasks":{
+            "header":"",
+            "description":""
+        },
+        "settings":{
+            "header":"",
+            "description":""
+        }
+    }
+}
