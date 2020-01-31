@@ -62,10 +62,12 @@ export default class TaskItem extends React.Component
     }
     deleteAnimation()
     {
-        Animated.spring(this.state.mainProgress, {toValue: 0,useNativeDriver: true}).start((e)=>{
+        this.props.remove(this.props.index);
+        // TODO: Fix Bugg
+        /*Animated.spring(this.state.mainProgress, {toValue: 0,useNativeDriver: true}).start((e)=>{
             if(e.finished === true)
                 this.props.remove(this.props.index);
-        });
+        });*/
     }
     stopDelete()
     {

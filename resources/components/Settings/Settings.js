@@ -4,6 +4,7 @@ import {
     Animated,
     View,
     Text,
+    Linking
 } from 'react-native';
 
 import Header from '../Misc/Header/Header';
@@ -14,40 +15,50 @@ import { Icon } from 'react-native-eva-icons';
 
 import Ripple from 'react-native-material-ripple';
 import style from './style';
-import {store} from '../Redux/Store';
+import {store, persistor} from '../Redux/Store';
+import Dropdown from '../Misc/DropDown/DropDown';
+
+import urls from '../../settings/urls.json';
 
 class Settings extends React.Component
 {
     constructor(props)
     {
         super(props);
-        console.log(props)
         this.state = {
             selectedTheme:props.selectedTheme,
+            selectedWeek:props.selectedWeek,
             progress:new Animated.Value(0.01),
-            language:props.language
+            language:props.languages[props.selectedLanguage].menu.settings,
+            selectedLanguage:props.selectedLanguage,
+            weeks:props.weeks
         };
         this.selectTheme = this.selectTheme.bind(this);
+        this.selectLanguage = this.selectLanguage.bind(this);
+        this.deleteSave = this.deleteSave.bind(this);
     }
     componentDidMount()
     {
         Animated.spring(this.state.progress, {toValue: 1,useNativeDriver: true}).start();
     }
-    /*componentWillReceiveProps(props)
-    {
-        if(props.selectedTheme)
-            this.setState({selectedTheme:props.selectedTheme,language:props.language});
-    }*/
     static getDerivedStateFromProps(props,state)
     {
         let changes = {};
 
         if(props.selectedTheme !== state.selectedTheme)
             changes.selectedTheme = props.selectedTheme;
+        /* Compare objects! -- ERR */
+        /*if(props.language !== state.language)
+            changes.language = props.language;*/
         if(props.selectedLanguage !== state.selectedLanguage)
             changes.selectedLanguage = props.selectedLanguage;
+        if(props.selectedWeek !== state.selectedWeek)
+            changes.selectedWeek = props.selectedWeek;
+        /* Compare arrays! -- ERR */
+        if(props.weeks !== state.weeks)
+            changes.weeks = props.weeks;
 
-        return Object.keys(changes).length === 0 ? null : changes;
+        return changes;
     }
     selectTheme(theme)
     {
@@ -59,6 +70,31 @@ class Settings extends React.Component
             }
         });
     }
+    selectWeek(week)
+    {
+        store.dispatch({
+            type:'settings::save',
+            settings:{
+                selectedWeek:week
+            }
+        });
+    }
+    selectLanguage(lang)
+    {
+        store.dispatch({
+            type:'settings::save',
+            settings:{
+                selectedLanguage:lang
+            }
+        });
+    }
+    deleteSave()
+    {
+        store.dispatch({
+            type:'PURGE'
+        });
+        persistor.purge();
+    }
     render()
     {
         return(
@@ -69,19 +105,14 @@ class Settings extends React.Component
             }]}]}>
                 <Header header={this.state.language.header}>{this.state.language.description}</Header>
                 <Section header={this.state.language.selectedWeek}>
-                    <Ripple style={style.language}>
-                        <Text style={style.languageText}>A</Text>
-                        <Icon name='checkmark-circle-2-outline' width={18} height={18} fill='rgb(56, 62, 83)'/>
-                    </Ripple>
+                    <Dropdown border={false} header={this.state.selectedWeek} content={this.state.weeks} select={this.selectWeek} />
                 </Section>
                 <Section header={this.state.language.language}>
-                    <Ripple style={style.language}>
-                        <Text style={style.languageText}>English</Text>
-                        <Icon name='checkmark-circle-2-outline' width={18} height={18} fill='rgb(56, 62, 83)'/>
-                    </Ripple>
-                    <Ripple style={style.language}>
-                        <Text style={style.languageText}>Hungarian</Text>
-                    </Ripple>
+                    {
+                        Object.keys(this.props.languages).map((elem,index)=>{
+                            return <LanguageItem key={`lang#${index}`} name={this.props.languages[elem]['language']} isSelected={this.state.selectedLanguage === elem} onPress={()=>this.selectLanguage(elem)} />;
+                        })
+                    }
                 </Section>
                 <Section header={this.state.language.theme}>
                     <View style={style.themeContainer}>
@@ -92,24 +123,36 @@ class Settings extends React.Component
                         <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(255,186,8)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(255,186,8)')}></Ripple>                 
                     </View>
                 </Section>
-                <Ripple style={style.deleteSaves}>
-                    <Icon name='trash-2-outline' width={24} height={18} fill='red'/>
-                    <Text style={style.deleteSavesText}>Delete Saves</Text>
+                <Ripple style={style.deleteSaves} rippleColor='red' onPress={this.deleteSave}>
+                    <Icon name='trash-2-outline' width={24} height={18} fill='red' />
+                    <Text style={style.deleteSavesText}>{this.state.language.deleteSave}</Text>
                 </Ripple>
-                <Ripple style={[style.deleteSaves,style.git]}>
+                <Ripple style={[style.deleteSaves,style.git]} onPress={()=>Linking.openURL(urls.git)}>
                     <Icon name='github-outline' width={24} height={18} fill='#6e5494'/>
-                    <Text style={[style.deleteSavesText,{color:'#6e5494'}]}>Check out on GitHub</Text>
+                    <Text style={[style.deleteSavesText,{color:'#6e5494'}]}>Check repository</Text>
                 </Ripple>
             </Animated.View >
         );
     }
 }
 
+const LanguageItem = props =>{
+    return(
+        <Ripple style={style.language} onPress={props.onPress}>
+            <Text style={style.languageText}>{props.name}</Text>
+            {props.isSelected && <Icon name='checkmark-circle-2-outline' width={18} height={18} fill='rgb(56, 62, 83)'/>}
+        </Ripple>
+    );
+};
+
 AppRegistry.registerComponent("Settings",()=>Settings);
 
 const mapStateToProps = state=>({
     selectedTheme:state?.Main?.selectedTheme,
-    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.settings
+    weeks:Object.keys(state?.Timetable?.weeks),
+    selectedWeek:state?.Main?.selectedWeek,
+    selectedLanguage:state?.Main?.selectedLanguage,
+    languages:state?.Main?.languages
 });
 
 export default connect(mapStateToProps)(Settings);

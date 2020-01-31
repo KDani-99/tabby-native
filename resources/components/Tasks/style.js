@@ -13,8 +13,8 @@ const style = StyleSheet.create(
         },
         taskBtn:{
             position:'absolute',
-            bottom:25,
-            right:25,
+            bottom:15,
+            right:15,
             display:'flex',
             alignItems:'center',
             justifyContent:'center',

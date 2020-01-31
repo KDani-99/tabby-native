@@ -2,6 +2,7 @@ import {createStore,combineReducers} from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
 import {updateIn} from 'seamless-immutable';
+
 /* Localization */
 import en from '../../languages/en.json';
 import hu from '../../languages/hu.json';
@@ -22,7 +23,11 @@ const taskState = {
 };
 
 const timetableState = {
-    weeks:{}
+    weeks:{
+        A:{
+
+        }
+    }
 };
 
 const mainReducer = (state = initialState,action) => {
@@ -43,6 +48,8 @@ const mainReducer = (state = initialState,action) => {
                 ...state,
                 ...action.settings
             };
+        case 'PURGE':
+            return initialState;
         default:
             return state;
     }
@@ -77,6 +84,8 @@ const taskReducer = (state = taskState,action) => {
                     ...state.tasks.slice(action.index+1),
                 ]
             };
+        case 'PURGE':
+            return taskState;
         default:
             return state;
     }
@@ -121,7 +130,8 @@ const lessonReducer = (state = timetableState,action) => {
                     }
                 }
             };
-        case 'lesson::delete':          
+        case 'lesson::delete':         
+            console.log(action)
             if(state.weeks[action.week][action.day].length-1 === 0)
             {
                 if(Object.keys(state.weeks[action.week]).length-1 === 0)
@@ -150,13 +160,15 @@ const lessonReducer = (state = timetableState,action) => {
                         ...elem.slice(action.index+1)
                     ]
                 });
+        case 'PURGE':
+            return timetableState;
         default:
             return state;
     }
 };
 
 const persistConfig = {
-    key: 'root5.0122',
+    key: 'root0',
     storage:AsyncStorage,
 };
 

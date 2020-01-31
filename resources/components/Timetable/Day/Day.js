@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     View, 
-    Text,
-    ScrollView
+    Text
 } from 'react-native';
 
 import style from './style';
@@ -20,7 +19,8 @@ export default class Week extends React.Component
                     {
                         this.props.content.map((elem,index)=>{
                             return( 
-                                <Activity key={`activity#${index}`} 
+                                <Activity
+                                    key={`${elem.lessonName}${elem.finishTime}`} 
                                     header={elem.lessonName} 
                                     room={elem.classRoom} 
                                     teacher={elem.teacherName} 

@@ -11,7 +11,7 @@ import Settings from '../Settings/Settings';
 import Tasks from '../Tasks/Tasks';
 import Timetable from '../Timetable/Timetable';
 import ErrorPopup from '../Misc/ErrorPopup/ErrorPopup';
-
+import Loader from './Loader/Loader';
 import { PersistGate } from 'redux-persist/integration/react'
 import {store,persistor} from '../Redux/Store';
 
@@ -56,24 +56,28 @@ export default class Main extends React.Component
     {
         return(
             <Provider store={store}>      
-                <PersistGate loading={null} persistor={persistor}>
+                <PersistGate loading={<Loader />} persistor={persistor}>
                     {this.state.error !== null && <ErrorPopup text={this.state.error.text}/>}
-                    <StatusBar backgroundColor="white" barStyle="dark-content" />
-                    <View style={style.container}>
-                        <Menu changeWindow={this.changeWindow}/>
-                        {
-                            this.state.selected === 0 &&
-                            <Timetable />
-                        }   
-                        {
-                            this.state.selected === 1 &&
-                            <Tasks />
-                        }    
-                        {
-                            this.state.selected === 2 &&
-                            <Settings />
-                        }    
-                    </View>                
+                    {
+                        <View>
+                            <StatusBar backgroundColor="white" barStyle="dark-content" />
+                            <View style={style.container}>
+                                <Menu changeWindow={this.changeWindow}/>
+                                {
+                                    this.state.selected === 0 &&
+                                    <Timetable />
+                                }   
+                                {
+                                    this.state.selected === 1 &&
+                                    <Tasks />
+                                }    
+                                {
+                                    this.state.selected === 2 &&
+                                    <Settings />
+                                }    
+                            </View>    
+                        </View>
+                    }            
                 </PersistGate>
             </Provider>
         );

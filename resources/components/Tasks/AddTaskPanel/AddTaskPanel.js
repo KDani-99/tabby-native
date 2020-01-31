@@ -2,6 +2,7 @@ import React from 'react';
 import {
     View,
     Animated,
+    AppRegistry,
 } from 'react-native';
 import {
     OutlinedTextField
@@ -10,13 +11,15 @@ import style from './style';
 import { Icon } from 'react-native-eva-icons';
 import Header from '../../Misc/Header/Header';
 import Ripple from 'react-native-material-ripple';
+import { connect } from 'react-redux';
 
-export default class AddTaskPanel extends React.Component
+class AddTaskPanel extends React.Component
 {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
+            language:props.language,
             progress:new Animated.Value(0.01)
         };
         this.addTask = this.addTask.bind(this);
@@ -58,7 +61,7 @@ export default class AddTaskPanel extends React.Component
                 outputRange: [0, 1],
                 })
             }]}]}>
-                <Header header={'Add Task'}>Fill out the fields and click on the checkmark</Header>
+                <Header header={this.state.language.header}>{this.state.language.description}</Header>
                 <OutlinedTextField
                     label='Header'
                     keyboardType='default'
@@ -103,3 +106,11 @@ export default class AddTaskPanel extends React.Component
         );
     }
 }
+
+AppRegistry.registerComponent("AddTaskPanel",()=>AddTaskPanel);
+
+const mapStateToProps = state => ({
+    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.addTask
+});
+
+export default connect(mapStateToProps)(AddTaskPanel);

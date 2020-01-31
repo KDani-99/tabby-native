@@ -19,6 +19,7 @@ class Menu extends React.Component
 
         this.state = {
             selected:0,
+            language:props.language,
             selectedTheme:props.selectedTheme
         };
         this.selectPage = this.selectPage.bind(this);
@@ -27,6 +28,8 @@ class Menu extends React.Component
     {
         if(props.selectedTheme)
             this.setState({selectedTheme:props.selectedTheme});
+        if(props.language)
+            this.setState({language:props.language});
     }
     selectPage(index)
     {
@@ -47,7 +50,7 @@ class Menu extends React.Component
                             :
                             <Icon name='calendar-outline' width={28} height={28} fill={'rgb(56, 62, 83)'}/>
                         }                 
-                        <Text style={[style.menuText,{color:this.state.selected === 0 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>Timetable</Text>
+                        <Text style={[style.menuText,{color:this.state.selected === 0 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>{this.state.language.timetable}</Text>
                     </Ripple>
                     <Ripple style={style.menuButton} onPress={()=>this.selectPage(1)} rippleColor={this.state.selectedTheme}> 
                         {
@@ -57,7 +60,7 @@ class Menu extends React.Component
                             :
                             <Icon name='checkmark-circle-2-outline' width={28} height={28} fill={'rgb(56, 62, 83)'}/>
                         }     
-                        <Text style={[style.menuText,{color:this.state.selected === 1 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>Tasks</Text>
+                        <Text style={[style.menuText,{color:this.state.selected === 1 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>{this.state.language.tasks}</Text>
                     </Ripple>
                     <Ripple style={style.menuButton} onPress={()=>this.selectPage(2)} rippleColor={this.state.selectedTheme}> 
                         {
@@ -67,7 +70,7 @@ class Menu extends React.Component
                             :
                             <Icon name='settings-outline' width={28} height={28} fill={'rgb(56, 62, 83)'}/>
                         }    
-                        <Text style={[style.menuText,{color:this.state.selected === 2 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>Settings</Text>
+                        <Text style={[style.menuText,{color:this.state.selected === 2 ? this.state.selectedTheme : 'rgb(56, 62, 83)'}]}>{this.state.language.settings}</Text>
                     </Ripple>
                 </View>
             </View>
@@ -78,6 +81,7 @@ class Menu extends React.Component
 AppRegistry.registerComponent("Menu",()=>Menu);
 
 const mapStateToProps = state=>({
+    language:state?.Main?.languages[state?.Main?.selectedLanguage].navigation,
     selectedTheme:state?.Main.selectedTheme
 });
 

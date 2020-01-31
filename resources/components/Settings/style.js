@@ -27,7 +27,8 @@ const style = StyleSheet.create(
             flexDirection:'row',
             borderRadius:4,
             padding:10,
-            justifyContent:'space-between'
+            justifyContent:'space-between',
+            overflow:'hidden'
         },
         languageText:{
             fontFamily:'Avenir',
@@ -53,7 +54,7 @@ const style = StyleSheet.create(
         },
         git:{
             backgroundColor:'rgba(110, 84, 148,0.1)',
-            borderBottomColor:'rgba(110, 84, 148,1)',
+            borderBottomColor:'rgba(110, 84, 148,0.25)',
             marginTop:10
         }
     }

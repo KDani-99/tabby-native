@@ -15,7 +15,6 @@ import AddTaskPanel from './AddTaskPanel/AddTaskPanel';
 import style from './style';
 import Ripple from 'react-native-material-ripple';
 import EmptyPage from '../Misc/EmptyPage/EmptyPage';
-import * as Progress from 'react-native-progress';
 
 class Tasks extends React.Component
 {
@@ -28,7 +27,8 @@ class Tasks extends React.Component
             tasks:props.tasks,
             taskCache:[],
             showAddTaskPanel:false,
-            progress:new Animated.Value(0.01)
+            progress:new Animated.Value(0.01),
+            language:props.language
         };
         this.removeTask = this.removeTask.bind(this);
         this.addTask = this.addTask.bind(this);
@@ -45,7 +45,10 @@ class Tasks extends React.Component
         if(props.selectedTheme !== state.selectedTheme) 
             changes.selectedTheme = props.selectedTheme;
         if(props.selectedLanguage !== state.selectedLanguage)
+        {
             changes.selectedLanguage = props.selectedLanguage;
+            changes.language = props.language;
+        }
         changes.tasks = props.tasks;
 
         return changes;
@@ -83,27 +86,29 @@ class Tasks extends React.Component
                 })
             }]}]}>
                 <View style={style.innerContainer}>
-                    <Header header={'Tasks'}>You can create and see your tasks here. (Long Press To Delete)</Header>
+                    <Header header={this.state.language.header}>{this.state.language.description}</Header>
                     {
                         this.state.tasks.length === 0 
                         ?
-                        <EmptyPage text={'You have no tasks'} selectedTheme={this.state.selectedTheme}/>
+                        <EmptyPage text={this.state.language.notask} selectedTheme={this.state.selectedTheme}/>
                         :                  
                         <ScrollView style={style.tasks}>
                             <View style={{padding:1}}>
                                 {
                                     this.state.tasks.map((elem,index)=>{
-                                        return <TaskItem selectedTheme={this.state.selectedTheme} key={`task#${index}`} index={index} header={elem.header} text={elem.description} completed={elem.completed} remove={this.removeTask}/>;
+                                        return <TaskItem selectedTheme={this.state.selectedTheme} key={`${elem.header}${elem.description[0]}`} index={index} header={elem.header} text={elem.description} completed={elem.completed} remove={this.removeTask}/>;
                                     })
                                 }
                             </View>
                         </ScrollView>
                      }
-                    <Progress.Circle size={50} indeterminate={false} progress={0.85} style={style.undoTaskOuter} color={this.state.selectedTheme} borderColor={'white'} >
+                    {
+                    // ! Will be made later
+                    /*<Progress.Circle size={50} indeterminate={false} progress={0.85} style={style.undoTaskOuter} color={this.state.selectedTheme} borderColor={'white'} >
                         <Ripple rippleCentered={true} rippleColor={'white'} style={[style.undoTaskInner,{backgroundColor:this.state.selectedTheme}]}>
                             <Icon name='undo-outline' width={28} height={28} fill={'white'}/>
                         </Ripple>
-                    </Progress.Circle>
+                    </Progress.Circle>*/}
                     <Ripple rippleCentered={true} rippleColor={'white'}  style={[style.taskBtn,{backgroundColor:this.state.selectedTheme}]} onPress={this.toggleAddTaskPanel}>
                         <Icon name='plus-outline' width={28} height={28} fill={'white'}/>
                     </Ripple>
@@ -119,6 +124,7 @@ AppRegistry.registerComponent("Tasks",()=>Tasks);
 const mapStateToProps = state=>({
     selectedTheme:state?.Main?.selectedTheme,
     selectedLanguage:state?.Main?.selectedLanguage,
+    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.tasks,
     tasks:state?.Tasks?.tasks
 });
 

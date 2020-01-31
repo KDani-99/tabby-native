@@ -28,18 +28,20 @@ class Dropdown extends React.Component
     select(value)
     {
         this.setState({value,show:false});
+        if(typeof this.props.select === 'function')
+            this.props.select(value);
     }
     render()
     {
         if(!this.state.show)
             return(
-                <Ripple style={[style.container,this.props.style]} onPress={this.show}>
+                <Ripple style={[style.container,this.props.style,this.props.border === false && {borderWidth:0}]} onPress={this.show}>
                     <Text style={style.header}>{this.state.value}</Text>
                 </Ripple>
             );
         else
             return(
-                <View >
+                <View>
                     <NestedScrollView style={style.dropdown}>
                         {
                             this.props.content.map((elem,index)=>{

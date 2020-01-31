@@ -2,7 +2,8 @@ import React from 'react';
 import {
     View,
     Text,
-    Animated
+    Animated,
+    AppRegistry
 } from 'react-native';
 import {
     OutlinedTextField
@@ -13,23 +14,25 @@ import Ripple from 'react-native-material-ripple';
 import DropDown from '../DropDown/DropDown';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { store } from '../../Redux/Store';
+import { connect } from 'react-redux';
 
 /* Input character restriction */
 const limit = {
     lessonName:45,
     classRoom:125,
-    teacher:10
+    teacher:125
 };
 
-export default class AddTaskPanel extends React.Component
+class InputWindow extends React.Component
 {
-    constructor()
+    constructor(props)
     {
-        super();
+        super(props);
         this.state = {
             progress:new Animated.Value(0.01),
             startHour:'',
-            finishHour:''
+            finishHour:'',
+            language:props.language
         };
 
         this.days = [
@@ -41,34 +44,7 @@ export default class AddTaskPanel extends React.Component
             'Saturday',
             'Sunday'
         ];
-        this.weeks = [
-            'A',
-            'B',
-            'C',
-            'D',
-            'E',
-            'F',
-            'G',
-            'H',
-            'I',
-            'J',
-            'K',
-            'L',
-            'M',
-            'N',
-            'O',
-            'P',
-            'Q',
-            'R',
-            'S',
-            'T',
-            'U',
-            'V',
-            'W',
-            'X',
-            'Y',
-            'Z'
-        ];
+        this.weeks = 'ABCDEFGHIJKLMNOPQRSTUVWXZY'.split('');
 
         this.add = this.add.bind(this);
         this.edit = this.edit.bind(this);
@@ -268,8 +244,8 @@ export default class AddTaskPanel extends React.Component
         {
             store.dispatch({
                 type:'lesson::delete',
-                week:validated.week,
-                day:validated.day,
+                week:this.props.selectedWeek,
+                day:this.props.editData.day,
                 index:this.props.editData.index
             });
             store.dispatch({
@@ -392,10 +368,10 @@ export default class AddTaskPanel extends React.Component
                 })
             }]}]} >
                 <KeyboardAwareScrollView showsVerticalScrollIndicator={false} extraScrollHeight={50}>
-                <Header header={this.props.editData === null ? 'Add Lesson' : 'Edit Lesson'}>Fill out the fields and click on the checkmark</Header>
+                <Header header={this.props.editData === null ? this.state.language.headerAdd : this.state.language.headerEdit}>{this.state.language.description}</Header>
                 <View style={style.inputInline}>
                     <OutlinedTextField
-                        label='Start Hours'
+                        label={this.state.language.startHour}
                         keyboardType='phone-pad'
                         tintColor={this.props.selectedTheme}
                         ref='_startH'
@@ -404,7 +380,7 @@ export default class AddTaskPanel extends React.Component
                         containerStyle={style.startTimeInput2}
                     />
                     <OutlinedTextField
-                        label='Start Minutes'
+                        label={this.state.language.startMinute}
                         keyboardType='phone-pad'
                         tintColor={this.props.selectedTheme}
                         ref='_startM'
@@ -414,7 +390,7 @@ export default class AddTaskPanel extends React.Component
                 </View>               
                 <View style={style.inputInline}>
                     <OutlinedTextField
-                        label='Finish Hours'
+                        label={this.state.language.finishHour}
                         keyboardType='phone-pad'
                         tintColor={this.props.selectedTheme}
                         ref='_finishH'
@@ -423,7 +399,7 @@ export default class AddTaskPanel extends React.Component
                         containerStyle={style.startTimeInput2}
                     />
                      <OutlinedTextField
-                        label='Start Minutes'
+                        label={this.state.language.finishMinute}
                         keyboardType='phone-pad'
                         tintColor={this.props.selectedTheme}
                         ref='_finishM'
@@ -433,18 +409,18 @@ export default class AddTaskPanel extends React.Component
                 </View>
                 <OutlinedTextField
                     multiline={true}
-                    label='Lesson Name'
+                    label={this.state.language.lessonName}
                     keyboardType='default'
                     tintColor={this.props.selectedTheme}
                     ref='_lessonName'
                     onChangeText={this.saveLessonName}
                     characterRestriction={limit.lessonName}
                 />
-                <DropDown header={'Week'} content={this.weeks} ref='_week'/>
-                <DropDown header={'Day'} content={this.days} ref='_day'/>
+                <DropDown header={this.state.language.week} content={this.weeks} ref='_week'/>
+                <DropDown header={this.state.language.day} content={this.days} ref='_day'/>
                 <OutlinedTextField
                     multiline={true}
-                    label='Class room (optional)'
+                    label={this.state.language.classRoom}
                     keyboardType='default'
                     tintColor={this.props.selectedTheme}
                     ref='_classRoom'
@@ -453,7 +429,7 @@ export default class AddTaskPanel extends React.Component
                 />
                 <OutlinedTextField
                     multiline={true}
-                    label='Teacher name (optional)'
+                    label={this.state.language.teacherName}
                     keyboardType='default'
                     tintColor={this.props.selectedTheme}
                     ref='_teacherName'
@@ -462,10 +438,10 @@ export default class AddTaskPanel extends React.Component
                 />
                 <View style={style.buttonContainer}>
                     <Ripple style={style.button} onPress={this.close}>
-                        <Text style={[style.buttonText,{color:'red'}]}>Cancel</Text>
+                        <Text style={[style.buttonText,{color:'red'}]}>{this.state.language.cancel}</Text>
                     </Ripple>
                     <Ripple style={[style.button,{backgroundColor:this.props.selectedTheme}]} onPress={this.props.editData === null ? this.add : this.edit}>
-                        <Text style={style.buttonText}>{this.props.editData === null ? 'Add' : 'Edit'}</Text>
+                        <Text style={style.buttonText}>{this.props.editData === null ? this.state.language.add : this.state.language.edit}</Text>
                     </Ripple>
                 </View>        
                 </KeyboardAwareScrollView>
@@ -473,3 +449,11 @@ export default class AddTaskPanel extends React.Component
         );
     }
 }
+
+AppRegistry.registerComponent("InputWindow",()=>InputWindow);
+
+const mapStateToProps = state => ({
+    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.inputWindow
+});
+
+export default connect(mapStateToProps)(InputWindow)

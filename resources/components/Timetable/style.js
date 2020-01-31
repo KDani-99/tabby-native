@@ -6,6 +6,10 @@ const style = StyleSheet.create(
             display:'flex',
             flex:1
         },
+        containerInner:{
+            display:'flex',
+            flex:1
+        },
         wrapper:{
             padding:15,
             paddingBottom:0

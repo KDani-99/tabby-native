@@ -31,7 +31,8 @@ class Timetable extends React.Component
             data:props.data,
             editData:null,
             showEdit:true,
-            selectedWeek:props.selectedWeek
+            selectedWeek:props.selectedWeek,
+            language:props.language
         };
         this.showAddWindow = this.showAddWindow.bind(this);
         this.add = this.add.bind(this);
@@ -77,19 +78,21 @@ class Timetable extends React.Component
                 })
             }]}]}>
                 <View style={style.wrapper}>
-                    <Header header={'Timetable - Week A'}>You can see your weekly schedule. (Press to delete or edit)</Header>
+                <Header header={`${this.state.language.header} ${this.state.selectedWeek}`}>{this.state.language.description}</Header>
                 </View>
-                <ScrollView style={style.containerInner}>
-                    {
-                        data.length === 0 &&
-                        <EmptyPage text={`You don't have any tables`} selectedTheme={this.state.selectedTheme}/>
-                    }
-                    {
-                        data.length !== 0 && data.map((elem,index)=>{
-                            return <Day day={elem} content={this.state.data[elem]} key={`day#${index}`} openWindow={this.showAddWindow} remove={this.remove}/>
-                        })
-                    }
-                </ScrollView>
+                {
+                    data.length === 0 
+                    ?
+                    <EmptyPage text={`${this.state.language.notables} ${this.state.selectedWeek}`} selectedTheme={this.state.selectedTheme}/>
+                    :
+                    <ScrollView style={style.containerInner}>
+                        {
+                            data.map((elem,index)=>{
+                                return <Day key={`day#${index}`} day={elem} content={this.state.data[elem]} openWindow={this.showAddWindow} remove={this.remove}/>
+                            })
+                        }
+                    </ScrollView>
+                }
                 <Ripple rippleCentered={true} rippleColor={'white'}  style={[style.taskBtn,{backgroundColor:this.state.selectedTheme}]} onPress={this.showAddWindow}>
                     <Icon name='plus-outline' width={28} height={28} fill={'white'}/>
                 </Ripple>
@@ -104,7 +107,7 @@ AppRegistry.registerComponent("Timetable",()=>Timetable);
 const mapStateToProps = state=>({
     selectedTheme:state?.Main?.selectedTheme,
     selectedLanguage:state?.Main?.selectedLanguage,
-    test:state.Timetable.weeks,
+    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.timetable,
     selectedWeek:state?.Main?.selectedWeek,
     data:typeof state?.Timetable?.weeks[state?.Main?.selectedWeek] !== 'object' ? [] : state?.Timetable?.weeks[state?.Main?.selectedWeek]
 });
