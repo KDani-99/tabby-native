@@ -20,9 +20,13 @@ To add your own language:
   3. Copy the content of ***en.json*** to your new language file
   4. Navigate to ***/resources/components/Redux/Store.js***
   5. Import your language like:
-  ```import en from '../../en.json';```  
+  ```js
+  import en from '../../en.json';
+  ```  
   Your import would look like:
-  ```import <code> from '../../<your_filename>.json';```  
+  ```js
+  import <code> from '../../<your_filename>.json';
+  ```  
   6. Add your imported language to the languages object
   ```js
   languages:{
