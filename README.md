@@ -1,15 +1,18 @@
 ## Tabby-native
 
-Native port for Tabby electron app made with **React Native**
+Tabby electron app Native port made with **React Native**
 
 (Build is available for **Android**)
 
+Desktop version (Windows and Mac)
+https://github.com/natixco/tabby
+
 ## Screenshots
-![Screenshot 1](/resources/screenshots/screenshot.png)
-![Screenshot 2](/resources/screenshots/screenshot-1.png)
-![Screenshot 3](/resources/screenshots/screenshot-2.png)
-![Screenshot 4](/resources/screenshots/screenshot-3.png)
-![Screenshot 5](/resources/screenshots/screenshot-4.png)
+<img src="/resources/screenshots/screenshot-2.png" width="360" />
+<img src="/resources/screenshots/screenshot-4.png" width="360" />
+<img src="/resources/screenshots/screenshot-3.png" width="360" />
+<img src="/resources/screenshots/screenshot-1.png" width="360" />
+<img src="/resources/screenshots/screenshot.png" width="360" />
 ## Translations
 
 **Currently available languages**: English
