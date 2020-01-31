@@ -17,16 +17,14 @@ import {
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
+  Colors
 } from 'react-native/Libraries/NewAppScreen';
 
 import Main from './resources/components/Main/Main';
 
+
 const App: () => React$Node = () => {
+  //console.disableYellowBox = true;
   return (
     <>
       <Main />
