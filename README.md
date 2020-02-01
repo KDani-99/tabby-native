@@ -8,12 +8,19 @@ Desktop version (Windows and Mac)
 https://github.com/natixco/tabby
 
 ## Screenshots
-<img src="/resources/screenshots/screenshot-2.png" width="50%" align="left" /> <img src="/resources/screenshots/screenshot-4.png" width="50%" align="left" />
-<img src="/resources/screenshots/screenshot-2.png" /> 
- <img src="/resources/screenshots/screenshot-4.png />
-<img src="/resources/screenshots/screenshot-3.png" />
-<img src="/resources/screenshots/screenshot-1.png />
-<img src="/resources/screenshots/screenshot.png" width="360" />
+<table>
+  <tr>
+    <td><img src="/resources/screenshots/screenshot-2.png"/></td>
+    <td><img src="/resources/screenshots/screenshot-4.png"/></td>
+  </tr>
+ <tr>
+    <td><img src="/resources/screenshots/screenshot-3.png"/></td>
+    <td><img src="/resources/screenshots/screenshot-1.png"/></td>
+  </tr>
+ <tr>
+    <td><img src="/resources/screenshots/screenshot.png"/></td>
+  </tr>
+</table>
 ## Translations
 
 **Currently available languages**: English
