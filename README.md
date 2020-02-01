@@ -8,6 +8,7 @@ Desktop version (Windows and Mac)
 https://github.com/natixco/tabby
 
 ## Screenshots
+| First Header  | Second Header |
 :-------------------------:|:-------------------------:
 <img src="/resources/screenshots/screenshot-2.png" /> |  <img src="/resources/screenshots/screenshot-4.png
 <img src="/resources/screenshots/screenshot-3.png" /> |  <img src="/resources/screenshots/screenshot-1.png
