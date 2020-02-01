@@ -9,10 +9,10 @@ https://github.com/natixco/tabby
 
 ## Screenshots
 <img src="/resources/screenshots/screenshot-2.png" width="50%" /> <img src="/resources/screenshots/screenshot-4.png width="50%" />
-Screenshots             |  Screenshots
-:-------------------------:|:-------------------------:
-<img src="/resources/screenshots/screenshot-2.png" /> <img src="/resources/screenshots/screenshot-4.png />
-<img src="/resources/screenshots/screenshot-3.png" /> | <img src="/resources/screenshots/screenshot-1.png />
+<img src="/resources/screenshots/screenshot-2.png" /> 
+ <img src="/resources/screenshots/screenshot-4.png />
+<img src="/resources/screenshots/screenshot-3.png" />
+<img src="/resources/screenshots/screenshot-1.png />
 <img src="/resources/screenshots/screenshot.png" width="360" />
 ## Translations
 
