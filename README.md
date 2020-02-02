@@ -27,6 +27,16 @@ https://github.com/natixco/tabby
   </tr>
 </table>
 
+## Installation
+1. Install dependencies
+```js
+  npm i
+```
+2. Link fonts
+```js
+  react-native link
+```
+
 ## Translations
 
 **Currently available languages**: English
