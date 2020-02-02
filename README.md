@@ -39,7 +39,7 @@ https://github.com/natixco/tabby
 
 ## Translations
 
-**Currently available languages**: English
+**Available languages**: English,Hungarian
 
 To add your own language:
   1. Navigate to ***/resources/languages***
