@@ -1,0 +1,50 @@
+{
+    "language":"Hungarian",
+    "navigation":{
+        "timetable":"Órarend",
+        "tasks":"Feladatok",
+        "settings":"Beállítások"
+    },
+    "menu":{
+        "timetable":{
+            "header":"Órarend - Hét",
+            "description":"Itt láthatod a heti óráidat. Óra szerkesztéséhez vagy törléséhez nyomd meg az adott órát.",
+            "notables":"Ez a heti órarended üres."
+        },
+        "tasks":{
+            "header":"Feladatok",
+            "description":"Itt láthatod a feladataidat. Tartsd lenyomva a törléshez.",
+            "notask":"Jelen pillanatban nincs egy feladatod sem"
+        },
+        "addTask":{
+            "header":"Feladat hozzáadása",
+            "description":"Töltsd ki a mezőket, majd nyomj rá mentés gombra"
+        },
+        "inputWindow":{
+            "headerAdd":"Új óra hozzáadása",
+            "headerEdit":"Óra szerkesztése",
+            "description":"Töltsd ki a mezőket, majd nyomj rá mentés gombra",
+            "startHour":"Kezdés óra",
+            "startMinute":"Kezdés perc",
+            "finishHour":"Befejezés óra",
+            "finishMinute":"Befejezés perc",
+            "lessonName":"Tantárgy",
+            "classRoom":"Osztályterem (optional)",
+            "teacherName":"Tanár neve (optional)",
+            "week":"Hét",
+            "day":"Nap",
+            "cancel":"Mégse",
+            "add":"Mentés",
+            "edit":"Szerkesztés"
+        },
+        "settings":{
+            "header":"Beállítások",
+            "description":"Változtasd meg a beállításaid.",
+            "selectedWeek":"Jelenlegi hét",
+            "language":"Nyelv",
+            "theme":"Téma",
+            "deleteSave":"Adatok törlése",
+            "source":"Forráskód megtekintése"
+        }
+    }
+}

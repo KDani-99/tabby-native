@@ -1,0 +1,73 @@
+import {StyleSheet} from 'react-native';
+
+const style = StyleSheet.create(
+    {
+        container:{
+            display:'flex',
+            flex:1
+        },
+        innerContainer:{
+            display:'flex',
+            flex:1,
+            padding:15
+        },
+        taskBtn:{
+            position:'absolute',
+            bottom:15,
+            right:15,
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            overflow:'hidden',
+            borderRadius:100,
+            width:50,
+            height:50,
+            elevation:5
+        },
+        emptyTaskPanel:{
+            display:'flex',flex:1,height:'100%',width:'100%',alignItems:'center',justifyContent:'center',
+            opacity:0.25
+        },
+        emptyTaskText:{
+
+            fontSize:16
+        },
+        undoTask:{
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            overflow:'hidden',
+            borderRadius:100,
+            width:50,
+            height:50,
+            right:25,
+            bottom:85
+        },
+        undoTaskOuter:{
+            display:'flex',
+            position:'absolute',
+            alignItems:'center',
+            justifyContent:'center',
+            right:25,
+            bottom:85
+        },
+        undoTaskInner:{
+            position:'absolute',
+            top:2.5,
+            zIndex:100,
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            overflow:'hidden',
+            borderRadius:100,
+            width:45,
+            height:45
+        },
+        tasks:{
+            display:'flex',
+            flex:1
+        }
+    }
+);
+
+export default style;
