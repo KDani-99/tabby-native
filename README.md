@@ -7,6 +7,16 @@ Tabby electron app Native port made with **React Native**
 Desktop version (Windows and Mac)
 https://github.com/natixco/tabby
 
+## Important
+
+If the app does not work:
+```
+cd android
+...
+gradlew clean
+```
+( and make sure to use `npm i`)
+
 ## Screenshots
 <table>
   <tr>
@@ -39,7 +49,7 @@ https://github.com/natixco/tabby
 
 ## Translations
 
-**Currently available languages**: English
+**Available languages**: English,Hungarian
 
 To add your own language:
   1. Navigate to ***/resources/languages***
