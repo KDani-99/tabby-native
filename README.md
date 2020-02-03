@@ -80,8 +80,11 @@ To add your own language:
   3. Copy the content of ***en.json*** to your new language file
   4. (Translate the values from english to your language)
   5. Make a fork of the repo, upload your translation and make a pull request or email us with the translation file and we will add it.
+  
   **You don't need to import it, it'll be automatically included in the app, but you must exit the app and run it again**
+  
 (IOS)
+
   **Not working yet**
   
 ## Bugs
