@@ -72,6 +72,17 @@ To add your own language:
     }
   ```
   7. Make a fork of the repo, upload your translation and make a pull request or email us with the translation file and we will add it.
-
+  
+To add your own language: 
+(Android)
+  1. Navigate to ***android/app/src/main/assets/languages***
+  2. Create a new file ***your_filename.json***
+  3. Copy the content of ***en.json*** to your new language file
+  4. (Translate the values from english to your language)
+  5. Make a fork of the repo, upload your translation and make a pull request or email us with the translation file and we will add it.
+  **You don't need to import it, it'll be automatically included in the app, but you must exit the app and run it again**
+(IOS)
+  **Not working yet**
+  
 ## Bugs
   Please open an issue if you've found a bug. 
