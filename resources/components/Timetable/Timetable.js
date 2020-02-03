@@ -119,7 +119,7 @@ AppRegistry.registerComponent("Timetable",()=>Timetable);
 const mapStateToProps = state=>({
     selectedTheme:state.Main.selectedTheme,
     selectedLanguage:state.Main.selectedLanguage,
-    language:state.Main.languages[state.Main.selectedLanguage].menu.timetable,
+    language:state.Language.languages[state.Language.languages.findIndex(elem=>elem.code === state.Main.selectedLanguage)].menu.timetable,
     selectedWeek:state.Main.selectedWeek,
     data:typeof state.Timetable.weeks[state.Main.selectedWeek] !== 'object' ? [] : state.Timetable.weeks[state.Main.selectedWeek]
 });

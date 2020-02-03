@@ -452,7 +452,7 @@ class InputWindow extends React.Component
 AppRegistry.registerComponent("InputWindow",()=>InputWindow);
 
 const mapStateToProps = state => ({
-    language:state.Main.languages[state.Main.selectedLanguage].menu.inputWindow
+    language:state.Language.languages[state.Language.languages.findIndex(elem=>elem.code === state.Main.selectedLanguage)].menu.inputWindow
 });
 
 export default connect(mapStateToProps)(InputWindow)

@@ -123,7 +123,7 @@ AppRegistry.registerComponent("Tasks",()=>Tasks);
 const mapStateToProps = state=>({
     selectedTheme:state.Main.selectedTheme,
     selectedLanguage:state.Main.selectedLanguage,
-    language:state.Main.languages[state.Main.selectedLanguage].menu.tasks,
+    language:state.Language.languages[state.Language.languages.findIndex(elem=>elem.code === state.Main.selectedLanguage)].menu.tasks,
     tasks:state.Tasks.tasks
 });
 

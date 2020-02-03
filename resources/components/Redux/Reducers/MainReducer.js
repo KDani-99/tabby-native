@@ -1,13 +1,6 @@
-import en from '../../../languages/en.json';
-import hu from '../../../languages/hu.json';
-
 const initialState = {
     selectedTheme:'rgb(3,102,252)',
     selectedLanguage:'en',
-    languages:{
-        en,
-        hu
-    },
     selectedWeek:'A',
     error:null
 };

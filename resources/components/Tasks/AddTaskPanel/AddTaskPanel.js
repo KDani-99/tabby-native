@@ -103,7 +103,7 @@ class AddTaskPanel extends React.Component
 AppRegistry.registerComponent("AddTaskPanel",()=>AddTaskPanel);
 
 const mapStateToProps = state => ({
-    language:state?.Main?.languages[state?.Main?.selectedLanguage].menu.addTask
+    language:state.Language.languages[state.Language.languages.findIndex(elem=>elem.code === state.Main.selectedLanguage)].menu.addTask
 });
 
 export default connect(mapStateToProps)(AddTaskPanel);

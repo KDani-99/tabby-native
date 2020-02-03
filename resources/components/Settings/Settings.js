@@ -4,7 +4,8 @@ import {
     Animated,
     View,
     Text,
-    Linking
+    Linking,
+    ScrollView
 } from 'react-native';
 
 import Header from '../Misc/Header/Header';
@@ -12,7 +13,7 @@ import Section from '../Misc/Section/Section';
 
 import {connect} from 'react-redux';
 import { Icon } from 'react-native-eva-icons';
-
+import NestedScrollView from 'react-native-nested-scroll-view';
 import Ripple from 'react-native-material-ripple';
 import {store, persistor} from '../Redux/Store';
 import Dropdown from '../Misc/DropDown/DropDown';
@@ -31,7 +32,7 @@ class Settings extends React.Component
             selectedTheme:props.selectedTheme,
             selectedWeek:props.selectedWeek,
             progress:new Animated.Value(0.01),
-            language:props.languages[props.selectedLanguage].menu.settings,
+            language:props.languages[props.languages.findIndex(elem=>elem.code === props.selectedLanguage)].menu.settings,
             selectedLanguage:props.selectedLanguage,
             weeks:props.weeks
         };
@@ -52,7 +53,7 @@ class Settings extends React.Component
         /* Compare objects! -- ERR */
         if(props.selectedLanguage !== state.selectedLanguage)
         {
-            changes.language = props.languages[props.selectedLanguage].menu.settings;
+            changes.language = props.languages[props.languages.findIndex(elem=>elem.code === props.selectedLanguage)].menu.settings;
             changes.selectedLanguage = props.selectedLanguage;
         }
         if(props.selectedWeek !== state.selectedWeek)
@@ -84,6 +85,8 @@ class Settings extends React.Component
     }
     selectLanguage(lang)
     {
+        if(lang === this.state.selectedLanguage) return;
+        
         store.dispatch({
             type:'settings::save',
             settings:{
@@ -106,34 +109,38 @@ class Settings extends React.Component
                 outputRange: [0, 1],
                 })
             }]}]}>
-                <Header header={this.state.language.header}>{this.state.language.description}</Header>
-                <Section header={this.state.language.selectedWeek}>
-                    <Dropdown border={false} header={this.state.selectedWeek} content={this.state.weeks} select={this.selectWeek} style={style.weekDropdown} textStyle={style.weekDropdownText}/>
-                </Section>
-                <Section header={this.state.language.language}>
-                    {
-                        Object.keys(this.props.languages).map((elem,index)=>{
-                            return <LanguageItem key={`lang#${index}`} name={this.props.languages[elem]['language']} isSelected={this.state.selectedLanguage === elem} onPress={()=>this.selectLanguage(elem)} />;
-                        })
-                    }
-                </Section>
-                <Section header={this.state.language.theme}>
-                    <View style={style.themeContainer}>
-                        <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(3,102,252)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(3,102,252)')}></Ripple>
-                        <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(250,94,98)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(250,94,98)')}></Ripple>
-                        <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(39,174,96)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(39,174,96)')}></Ripple>
-                        <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(137,128,245)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(137,128,245)')}></Ripple>
-                        <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(255,186,8)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(255,186,8)')}></Ripple>                 
-                    </View>
-                </Section>
-                <Ripple style={style.deleteSaves} rippleColor='red' onPress={this.deleteSave}>
-                    <Icon name='trash-2-outline' width={24} height={18} fill='red' />
-                    <Text style={style.deleteSavesText}>{this.state.language.deleteSave}</Text>
-                </Ripple>
-                <Ripple style={[style.deleteSaves,style.git]} onPress={()=>Linking.openURL(urls.git)}>
-                    <Icon name='github-outline' width={24} height={18} fill='#6e5494'/>
-                    <Text style={[style.deleteSavesText,{color:'#6e5494'}]}>{this.state.language.source}</Text>
-                </Ripple>
+                <ScrollView>
+                    <Header header={this.state.language.header}>{this.state.language.description}</Header>
+                    <Section header={this.state.language.selectedWeek}>
+                        <Dropdown border={false} header={this.state.selectedWeek} content={this.state.weeks} select={this.selectWeek} style={style.weekDropdown} textStyle={style.weekDropdownText}/>
+                    </Section>
+                    <Section header={this.state.language.language}>
+                        <NestedScrollView style={{maxHeight:105}}>
+                        {
+                            this.props.languages.map((elem,index)=>{
+                                return <LanguageItem key={`lang#${index}`} name={elem.language} isSelected={this.state.selectedLanguage === elem.code} onPress={()=>this.selectLanguage(elem.code)} />;
+                            })
+                        }
+                        </NestedScrollView>
+                    </Section>
+                    <Section header={this.state.language.theme}>
+                        <View style={style.themeContainer}>
+                            <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(3,102,252)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(3,102,252)')}></Ripple>
+                            <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(250,94,98)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(250,94,98)')}></Ripple>
+                            <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(39,174,96)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(39,174,96)')}></Ripple>
+                            <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(137,128,245)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(137,128,245)')}></Ripple>
+                            <Ripple rippleCentered={true} rippleColor={'white'} style={[style.themeButton,{backgroundColor:'rgb(255,186,8)'}]} useForeground={false} onPress={()=>this.selectTheme('rgb(255,186,8)')}></Ripple>                 
+                        </View>
+                    </Section>
+                    <Ripple style={style.deleteSaves} rippleColor='red' onPress={this.deleteSave}>
+                        <Icon name='trash-2-outline' width={24} height={18} fill='red' />
+                        <Text style={style.deleteSavesText}>{this.state.language.deleteSave}</Text>
+                    </Ripple>
+                    <Ripple style={[style.deleteSaves,style.git]} onPress={()=>Linking.openURL(urls.git)}>
+                        <Icon name='github-outline' width={24} height={18} fill='#6e5494'/>
+                        <Text style={[style.deleteSavesText,{color:'#6e5494'}]}>{this.state.language.source}</Text>
+                    </Ripple>
+                </ScrollView>
             </Animated.View >
         );
     }
@@ -151,11 +158,11 @@ const LanguageItem = props =>{
 AppRegistry.registerComponent("Settings",()=>Settings);
 
 const mapStateToProps = state=>({
-    selectedTheme:state?.Main?.selectedTheme,
-    weeks:Object.keys(state?.Timetable?.weeks),
-    selectedWeek:state?.Main?.selectedWeek,
-    selectedLanguage:state?.Main?.selectedLanguage,
-    languages:state?.Main?.languages
+    selectedTheme:state.Main.selectedTheme,
+    weeks:Object.keys(state.Timetable?.weeks),
+    selectedWeek:state.Main.selectedWeek,
+    selectedLanguage:state.Main.selectedLanguage,
+    languages:state.Language.languages
 });
 
 export default connect(mapStateToProps)(Settings);

@@ -85,7 +85,7 @@ class Menu extends React.Component
 AppRegistry.registerComponent("Menu",()=>Menu);
 
 const mapStateToProps = state=>({
-    language:state.Main.languages[state.Main.selectedLanguage].navigation,
+    language:state.Language.languages[state.Language.languages.findIndex(elem=>elem.code === state.Main.selectedLanguage)].navigation,
     selectedTheme:state.Main.selectedTheme
 });
 

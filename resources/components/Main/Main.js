@@ -5,7 +5,7 @@ import {
     StatusBar
 } from 'react-native';
 import { Provider } from 'react-redux'
-
+import LanguageLoader from 'react-native-language-loader';
 import Menu from './Menu/Menu';
 import Settings from '../Settings/Settings';
 import Tasks from '../Tasks/Tasks';
@@ -14,6 +14,7 @@ import ErrorPopup from '../Misc/ErrorPopup/ErrorPopup';
 import Loader from './Loader/Loader';
 import { PersistGate } from 'redux-persist/integration/react'
 import {store,persistor} from '../Redux/Store';
+import {NativeModules} from 'react-native';
 
 const style = StyleSheet.create({
     container:{
@@ -32,11 +33,33 @@ export default class Main extends React.Component
     {
         super();
         this.state = {
+            loaded:false,
             selected:0,
             error:null
         };
         this.unsubscribe = null;
         this.changeWindow = this.changeWindow.bind(this);
+
+    }
+    UNSAFE_componentWillMount = async()=>
+    {
+        await LanguageLoader.loadLanguagesAsync()
+        .then(languages=>JSON.parse(languages))
+        .then(languages=>{
+            store.dispatch({
+                type:'language::load',
+                languages
+            });
+        })
+        .catch(exception=>{
+            store.dispatch({
+                type:'error::show',
+                error:{
+                    text:'Could not load any language'
+                }
+            })
+        });
+        this.setState({loaded:true});
     }
     componentDidMount()
     {
@@ -55,30 +78,33 @@ export default class Main extends React.Component
     render()
     {
         return(
-            <Provider store={store}>      
-                <PersistGate loading={<Loader />} persistor={persistor}>
-                    {this.state.error !== null && <ErrorPopup text={this.state.error.text}/>}
-                    {
-                        <View>
-                            <StatusBar backgroundColor="white" barStyle="dark-content" />
-                            <View style={style.container}>
-                                <Menu changeWindow={this.changeWindow}/>
-                                {
-                                    this.state.selected === 0 &&
-                                    <Timetable />
-                                }   
-                                {
-                                    this.state.selected === 1 &&
-                                    <Tasks />
-                                }    
-                                {
-                                    this.state.selected === 2 &&
-                                    <Settings />
-                                }    
-                            </View>    
-                        </View>
-                    }            
-                </PersistGate>
+            <Provider store={store}>
+                    <PersistGate loading={<Loader />} persistor={persistor}>
+                        {this.state.error !== null && <ErrorPopup text={this.state.error.text}/>}
+                        {
+                            this.state.loaded ?
+                            <View>
+                                <StatusBar backgroundColor="white" barStyle="dark-content" />
+                                <View style={style.container}>
+                                    <Menu changeWindow={this.changeWindow}/>
+                                    {
+                                        this.state.selected === 0 &&
+                                        <Timetable />
+                                    }   
+                                    {
+                                        this.state.selected === 1 &&
+                                        <Tasks />
+                                    }    
+                                    {
+                                        this.state.selected === 2 &&
+                                        <Settings />
+                                    }    
+                                </View>    
+                            </View>
+                            :
+                            <Loader />
+                        }            
+                    </PersistGate>
             </Provider>
         );
     }
