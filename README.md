@@ -9,12 +9,13 @@ https://github.com/natixco/tabby
 
 ## Important
 
-If the app does not start:
+If the app does not work:
 ```
 cd android
 ...
 gradlew clean
 ```
+( and make sure to use `npm i`)
 
 ## Screenshots
 <table>
