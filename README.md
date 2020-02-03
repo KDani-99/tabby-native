@@ -7,6 +7,15 @@ Tabby electron app Native port made with **React Native**
 Desktop version (Windows and Mac)
 https://github.com/natixco/tabby
 
+## Important
+
+If the app does not start:
+```
+cd android
+...
+gradlew clean
+```
+
 ## Screenshots
 <table>
   <tr>
