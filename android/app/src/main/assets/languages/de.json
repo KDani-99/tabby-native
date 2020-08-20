@@ -9,7 +9,7 @@
     "menu":{
         "timetable":{
             "header":"Studenplan - Woche",
-            "description":"Hier sehen Sie Ihren wöchentlichen Studentplan. (Halten zum Löschen / Bearbeiten)",
+            "description":"Hier sehen Sie Ihren wöchentlichen Stundenplan. (Halten zum Löschen / Bearbeiten)",
             "notables":"Sie haben keine Einträge in dieser Woche."
         },
         "tasks":{
