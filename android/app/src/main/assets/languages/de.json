@@ -1,0 +1,51 @@
+{
+    "language":"Deutsch",
+    "code":"de",
+    "navigation":{
+        "timetable":"Stundenplan",
+        "tasks":"Aufgaben",
+        "settings":"Einstellungen"
+    },
+    "menu":{
+        "timetable":{
+            "header":"Studenplan - Woche",
+            "description":"Hier sehen Sie Ihren wöchentlichen Stundenplan. (Halten zum Löschen / Bearbeiten)",
+            "notables":"Sie haben keine Einträge in dieser Woche."
+        },
+        "tasks":{
+            "header":"Aufgaben",
+            "description":"Hier können Sie Aufgaben verwalten. (Lang drücken zum Löschen)",
+            "notask":"Sie haben keine Aufgaben"
+        },
+        "addTask":{
+            "header":"Neue Aufgabe",
+            "description":"Bitte Felder ausfüllen und speichern"
+        },
+        "inputWindow":{
+            "headerAdd":"Neuer Kurs",
+            "headerEdit":"Kurs bearbeiten",
+            "description":"Bitte Felder ausfüllen und speichern",
+            "startHour":"Start (Stunden)",
+            "startMinute":"Start (Minuten)",
+            "finishHour":"Ende (Stunden)",
+            "finishMinute":"Ende (Minuten)",
+            "lessonName":"Kurs-Name",
+            "classRoom":"Klassenraum (optional)",
+            "teacherName":"Lehrername (optional)",
+            "week":"Woche",
+            "day":"Tag",
+            "cancel":"Abbrechen",
+            "add":"Hinzufügen",
+            "edit":"Speichern"
+        },
+        "settings":{
+            "header":"Einstellungen",
+            "description":"Appverhalten anpassen",
+            "selectedWeek":"Aktuelle Woche",
+            "language":"Sprache",
+            "theme":"Thema",
+            "deleteSave":"App-Speicher löschen",
+            "source":"Zum Quellcode"
+        }
+    }
+}
