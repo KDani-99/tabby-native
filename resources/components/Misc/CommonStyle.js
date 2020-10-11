@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform,StyleSheet} from 'react-native';
 
 const style = StyleSheet.create(
     {
@@ -16,7 +16,7 @@ const style = StyleSheet.create(
             fontSize:20
         },
         textHeader:{
-            fontFamily:'Fredoka'
+            fontFamily:Platform.OS === 'ios' ? 'Fredoka One' : 'Fredoka'
         }
     }
 );
