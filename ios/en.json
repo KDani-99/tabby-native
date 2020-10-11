@@ -1,0 +1,51 @@
+{
+    "language":"English",
+    "code":"en",
+    "navigation":{
+        "timetable":"Timetable",
+        "tasks":"Tasks",
+        "settings":"Settings"
+    },
+    "menu":{
+        "timetable":{
+            "header":"Timetable - Week",
+            "description":"Here, you can see your weekly schedule. (Press to delete or edit)",
+            "notables":"You don't have any tables on week"
+        },
+        "tasks":{
+            "header":"Tasks",
+            "description":"You can create and see your tasks here. (Long press to delete)",
+            "notask":"You have no tasks"
+        },
+        "addTask":{
+            "header":"Add Task",
+            "description":"Fill out the fields and click on the checkmark"
+        },
+        "inputWindow":{
+            "headerAdd":"Add Lesson",
+            "headerEdit":"Edit Lesson",
+            "description":"Fill out the fields and click on the checkmark",
+            "startHour":"Start Hours",
+            "startMinute":"Start Minutes",
+            "finishHour":"Finish Hours",
+            "finishMinute":"Finish Minutes",
+            "lessonName":"Lesson name",
+            "classRoom":"Class room (optional)",
+            "teacherName":"Teacher name (optional)",
+            "week":"Week",
+            "day":"Day",
+            "cancel":"Cancel",
+            "add":"Add",
+            "edit":"Edit"
+        },
+        "settings":{
+            "header":"Settings",
+            "description":"You can change your settings",
+            "selectedWeek":"Selected Week",
+            "language":"Language",
+            "theme":"Theme",
+            "deleteSave":"Delete saves",
+            "source":"Check source"
+        }
+    }
+}
