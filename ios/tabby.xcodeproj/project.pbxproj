@@ -8,20 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* tabbyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tabbyTests.m */; };
+		08729D1B4A2741ACBB6AACB3 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFED2FB4E44BCD9BAC7134 /* Roboto-Thin.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1DEE9151BA3A00F4486FB67F /* libPods-tabbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */; };
+		22C6F3DA8F13489AA98AD238 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E19241CDE1478697B085DA /* Fredoka.ttf */; };
+		2786DED0FBB14ED5BEDB2C9A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* tabbyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tabbyTests.m */; };
-		22C6F3DA8F13489AA98AD238 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E19241CDE1478697B085DA /* Fredoka.ttf */; };
 		368C8098B33B41BBA907254A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8696720D6B594F488B4861BF /* Roboto-Bold.ttf */; };
-		2786DED0FBB14ED5BEDB2C9A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */; };
-		DE84F9BC394141FB88865B53 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */; };
+		4173E24469AE2D3EC342D483 /* libPods-tabby-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */; };
+		65E69CB425338A6F00E70960 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E69CB325338A6F00E70960 /* en.json */; };
+		65E69CBD25338AFA00E70960 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E19241CDE1478697B085DA /* Fredoka.ttf */; };
+		65E69CC72533917200E70960 /* de.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E69CC62533917200E70960 /* de.json */; };
 		73887CDF07204A6CA808F7E3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6714F0EE6C0D4B7E9F278155 /* Roboto-Regular.ttf */; };
-		08729D1B4A2741ACBB6AACB3 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFFED2FB4E44BCD9BAC7134 /* Roboto-Thin.ttf */; };
+		AD22FCAB215BCE4593346854 /* libPods-tabby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */; };
+		B2F872B2E9E430BBCC50388F /* libPods-tabby-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */; };
+		DE84F9BC394141FB88865B53 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,7 @@
 		00E356EE1AD99517003FC87E /* tabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* tabbyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbyTests.m; sourceTree = "<group>"; };
+		06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* tabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = tabby/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = tabby/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,16 +61,29 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = tabby/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tabby/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = tabby/main.m; sourceTree = "<group>"; };
+		295E16FE4E1BB5F24295F8CE /* Pods-tabby-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tabby-tvOS/Pods-tabby-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* tabby-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabby-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* tabby-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tabby-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbyTests.release.xcconfig"; path = "Target Support Files/Pods-tabbyTests/Pods-tabbyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5BA6ECD2DAFA18AD31AD5510 /* Pods-tabby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby.release.xcconfig"; path = "Target Support Files/Pods-tabby/Pods-tabby.release.xcconfig"; sourceTree = "<group>"; };
+		5C0E67DA1BA679A18A0358AD /* Pods-tabby-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tabby-tvOS/Pods-tabby-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../resources/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		600E5FC86BE269E79A7CCD51 /* Pods-tabby-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-tabby-tvOSTests/Pods-tabby-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		65E69CB325338A6F00E70960 /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
+		65E69CC62533917200E70960 /* de.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = de.json; sourceTree = "<group>"; };
+		6714F0EE6C0D4B7E9F278155 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../resources/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		78E19241CDE1478697B085DA /* Fredoka.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file; name = Fredoka.ttf; path = ../resources/fonts/Fredoka.ttf; sourceTree = "<group>"; };
+		82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8696720D6B594F488B4861BF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../resources/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabbyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FFFED2FB4E44BCD9BAC7134 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../resources/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbyTests.debug.xcconfig"; path = "Target Support Files/Pods-tabbyTests/Pods-tabbyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../resources/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		78E19241CDE1478697B085DA /* Fredoka.ttf */ = {isa = PBXFileReference; name = "Fredoka.ttf"; path = "../resources/fonts/Fredoka.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8696720D6B594F488B4861BF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../resources/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../resources/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-MediumItalic.ttf"; path = "../resources/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6714F0EE6C0D4B7E9F278155 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../resources/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8FFFED2FB4E44BCD9BAC7134 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../resources/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA3C22CEEE953149B6DE6ABC /* Pods-tabby-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-tabby-tvOSTests/Pods-tabby-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE11B19863F6FA8C25A8C6B4 /* Pods-tabby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby.debug.xcconfig"; path = "Target Support Files/Pods-tabby/Pods-tabby.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEE9151BA3A00F4486FB67F /* libPods-tabbyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD22FCAB215BCE4593346854 /* libPods-tabby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F872B2E9E430BBCC50388F /* libPods-tabby-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4173E24469AE2D3EC342D483 /* libPods-tabby-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +158,21 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */,
+				82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */,
+				B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */,
+				8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65E69CB225338A3800E70960 /* languages */ = {
+			isa = PBXGroup;
+			children = (
+				65E69CB325338A6F00E70960 /* en.json */,
+				65E69CC62533917200E70960 /* de.json */,
+			);
+			name = languages;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -153,6 +191,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				AA5D469A218041DC94BECBC7 /* Resources */,
+				FBB4EC0FB052501724DDE8C8 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -171,8 +210,9 @@
 			sourceTree = "<group>";
 		};
 		AA5D469A218041DC94BECBC7 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
+				65E69CB225338A3800E70960 /* languages */,
 				78E19241CDE1478697B085DA /* Fredoka.ttf */,
 				8696720D6B594F488B4861BF /* Roboto-Bold.ttf */,
 				5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */,
@@ -182,7 +222,21 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		FBB4EC0FB052501724DDE8C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE11B19863F6FA8C25A8C6B4 /* Pods-tabby.debug.xcconfig */,
+				5BA6ECD2DAFA18AD31AD5510 /* Pods-tabby.release.xcconfig */,
+				295E16FE4E1BB5F24295F8CE /* Pods-tabby-tvOS.debug.xcconfig */,
+				5C0E67DA1BA679A18A0358AD /* Pods-tabby-tvOS.release.xcconfig */,
+				FA3C22CEEE953149B6DE6ABC /* Pods-tabby-tvOSTests.debug.xcconfig */,
+				600E5FC86BE269E79A7CCD51 /* Pods-tabby-tvOSTests.release.xcconfig */,
+				B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */,
+				4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -191,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tabbyTests" */;
 			buildPhases = (
+				5B24EDA90073E257EF6BA977 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -209,6 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "tabby" */;
 			buildPhases = (
+				C0336F2599BD5A5C08D2EEB7 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -220,7 +276,7 @@
 			dependencies = (
 			);
 			name = tabby;
-			productName = "tabby";
+			productName = tabby;
 			productReference = 13B07F961A680F5B00A75B9A /* tabby.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -228,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tabby-tvOS" */;
 			buildPhases = (
+				13637C3C584D379F991C887A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -247,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "tabby-tvOSTests" */;
 			buildPhases = (
+				9070F8283E9AD45196F10876 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -290,6 +348,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -311,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E69CBD25338AFA00E70960 /* Fredoka.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +378,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E69CB425338A6F00E70960 /* en.json in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				65E69CC72533917200E70960 /* de.json in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				22C6F3DA8F13489AA98AD238 /* Fredoka.ttf in Resources */,
 				368C8098B33B41BBA907254A /* Roboto-Bold.ttf in Resources */,
@@ -361,6 +423,28 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		13637C3C584D379F991C887A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabby-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +458,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5B24EDA90073E257EF6BA977 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabbyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9070F8283E9AD45196F10876 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabby-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0336F2599BD5A5C08D2EEB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tabby-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -480,6 +630,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -502,6 +653,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -521,6 +673,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE11B19863F6FA8C25A8C6B4 /* Pods-tabby.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -540,6 +693,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BA6ECD2DAFA18AD31AD5510 /* Pods-tabby.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,6 +712,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295E16FE4E1BB5F24295F8CE /* Pods-tabby-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -585,6 +740,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0E67DA1BA679A18A0358AD /* Pods-tabby-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -612,6 +768,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA3C22CEEE953149B6DE6ABC /* Pods-tabby-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -638,6 +795,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 600E5FC86BE269E79A7CCD51 /* Pods-tabby-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
