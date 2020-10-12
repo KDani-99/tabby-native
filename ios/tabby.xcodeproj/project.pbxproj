@@ -13,21 +13,21 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1DEE9151BA3A00F4486FB67F /* libPods-tabbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */; };
 		22C6F3DA8F13489AA98AD238 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E19241CDE1478697B085DA /* Fredoka.ttf */; };
+		250013DE45BA1A1EE9CBE2FE /* libPods-tabby-tabbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4798D1F4527B10D512572FD /* libPods-tabby-tabbyTests.a */; };
 		2786DED0FBB14ED5BEDB2C9A /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* tabbyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tabbyTests.m */; };
 		368C8098B33B41BBA907254A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8696720D6B594F488B4861BF /* Roboto-Bold.ttf */; };
-		4173E24469AE2D3EC342D483 /* libPods-tabby-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */; };
+		5ED16A645729359A561719CF /* libPods-tabby-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1536D012D058577CF0AC0F87 /* libPods-tabby-tvOS.a */; };
 		65E69CB425338A6F00E70960 /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E69CB325338A6F00E70960 /* en.json */; };
 		65E69CBD25338AFA00E70960 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78E19241CDE1478697B085DA /* Fredoka.ttf */; };
 		65E69CC72533917200E70960 /* de.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E69CC62533917200E70960 /* de.json */; };
 		73887CDF07204A6CA808F7E3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6714F0EE6C0D4B7E9F278155 /* Roboto-Regular.ttf */; };
-		AD22FCAB215BCE4593346854 /* libPods-tabby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */; };
-		B2F872B2E9E430BBCC50388F /* libPods-tabby-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */; };
+		7F7897CA41C6C6C05FA0AF66 /* libPods-tabby-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F018D04B9CD2BD8ECAD480F6 /* libPods-tabby-tvOSTests.a */; };
+		9667D890A2A89C1632504A70 /* libPods-tabby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D076AE9109B7A3DDFAC27EE0 /* libPods-tabby.a */; };
 		DE84F9BC394141FB88865B53 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,6 @@
 		00E356EE1AD99517003FC87E /* tabbyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tabbyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* tabbyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbyTests.m; sourceTree = "<group>"; };
-		06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* tabby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = tabby/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = tabby/AppDelegate.m; sourceTree = "<group>"; };
@@ -61,27 +60,30 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = tabby/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tabby/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = tabby/main.m; sourceTree = "<group>"; };
+		1536D012D058577CF0AC0F87 /* libPods-tabby-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		295E16FE4E1BB5F24295F8CE /* Pods-tabby-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tabby-tvOS/Pods-tabby-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* tabby-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabby-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* tabby-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tabby-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbyTests.release.xcconfig"; path = "Target Support Files/Pods-tabbyTests/Pods-tabbyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A15EF62908A25849C901F52 /* Pods-tabby-tabbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tabbyTests.release.xcconfig"; path = "Target Support Files/Pods-tabby-tabbyTests/Pods-tabby-tabbyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BA6ECD2DAFA18AD31AD5510 /* Pods-tabby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby.release.xcconfig"; path = "Target Support Files/Pods-tabby/Pods-tabby.release.xcconfig"; sourceTree = "<group>"; };
 		5C0E67DA1BA679A18A0358AD /* Pods-tabby-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tabby-tvOS/Pods-tabby-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C75C742EBDB42C9BAC4D8F7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../resources/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		600E5FC86BE269E79A7CCD51 /* Pods-tabby-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-tabby-tvOSTests/Pods-tabby-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		619AEAFD160CF36054B10724 /* Pods-tabby-tabbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tabbyTests.debug.xcconfig"; path = "Target Support Files/Pods-tabby-tabbyTests/Pods-tabby-tabbyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65E69CB325338A6F00E70960 /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		65E69CC62533917200E70960 /* de.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = de.json; sourceTree = "<group>"; };
 		6714F0EE6C0D4B7E9F278155 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../resources/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78E19241CDE1478697B085DA /* Fredoka.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file; name = Fredoka.ttf; path = ../resources/fonts/Fredoka.ttf; sourceTree = "<group>"; };
-		82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8696720D6B594F488B4861BF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../resources/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabbyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFFED2FB4E44BCD9BAC7134 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../resources/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabbyTests.debug.xcconfig"; path = "Target Support Files/Pods-tabbyTests/Pods-tabbyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4798D1F4527B10D512572FD /* libPods-tabby-tabbyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tabbyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D076AE9109B7A3DDFAC27EE0 /* libPods-tabby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E535D2C4181143DEBB0F58B0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../resources/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F018D04B9CD2BD8ECAD480F6 /* libPods-tabby-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tabby-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3C22CEEE953149B6DE6ABC /* Pods-tabby-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-tabby-tvOSTests/Pods-tabby-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE11B19863F6FA8C25A8C6B4 /* Pods-tabby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tabby.debug.xcconfig"; path = "Target Support Files/Pods-tabby/Pods-tabby.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DEE9151BA3A00F4486FB67F /* libPods-tabbyTests.a in Frameworks */,
+				250013DE45BA1A1EE9CBE2FE /* libPods-tabby-tabbyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD22FCAB215BCE4593346854 /* libPods-tabby.a in Frameworks */,
+				9667D890A2A89C1632504A70 /* libPods-tabby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F872B2E9E430BBCC50388F /* libPods-tabby-tvOS.a in Frameworks */,
+				5ED16A645729359A561719CF /* libPods-tabby-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4173E24469AE2D3EC342D483 /* libPods-tabby-tvOSTests.a in Frameworks */,
+				7F7897CA41C6C6C05FA0AF66 /* libPods-tabby-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,10 +160,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				06EB66EDFD9B0B1D10F73C8A /* libPods-tabby.a */,
-				82FEF2BAC3328F4D06CACE7A /* libPods-tabby-tvOS.a */,
-				B488A71DEF28CC2558C771A5 /* libPods-tabby-tvOSTests.a */,
-				8FFDB09439A187FD7AF22D90 /* libPods-tabbyTests.a */,
+				D076AE9109B7A3DDFAC27EE0 /* libPods-tabby.a */,
+				C4798D1F4527B10D512572FD /* libPods-tabby-tabbyTests.a */,
+				1536D012D058577CF0AC0F87 /* libPods-tabby-tvOS.a */,
+				F018D04B9CD2BD8ECAD480F6 /* libPods-tabby-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,6 +236,8 @@
 				600E5FC86BE269E79A7CCD51 /* Pods-tabby-tvOSTests.release.xcconfig */,
 				B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */,
 				4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */,
+				619AEAFD160CF36054B10724 /* Pods-tabby-tabbyTests.debug.xcconfig */,
+				5A15EF62908A25849C901F52 /* Pods-tabby-tabbyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -249,6 +253,7 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				3202F3A019E7CD74FA7DB452 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +275,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				7955E70E5C9D031BE895A969 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,6 +465,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		3202F3A019E7CD74FA7DB452 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabby-tabbyTests/Pods-tabby-tabbyTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tabby-tabbyTests/Pods-tabby-tabbyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B24EDA90073E257EF6BA977 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,11 +498,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tabbyTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-tabby-tabbyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7955E70E5C9D031BE895A969 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tabby/Pods-tabby-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tabby/Pods-tabby-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9070F8283E9AD45196F10876 /* [CP] Check Pods Manifest.lock */ = {
@@ -630,7 +672,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B32CDA94DF9B0E931C1150A7 /* Pods-tabbyTests.debug.xcconfig */;
+			baseConfigurationReference = 619AEAFD160CF36054B10724 /* Pods-tabby-tabbyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -653,7 +695,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4205922AB52BF9635B86E17B /* Pods-tabbyTests.release.xcconfig */;
+			baseConfigurationReference = 5A15EF62908A25849C901F52 /* Pods-tabby-tabbyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -679,6 +721,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = tabby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -698,6 +741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = tabby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
