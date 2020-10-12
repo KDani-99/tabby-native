@@ -2,7 +2,9 @@ import React from 'react';
 import {
     View,
     StyleSheet,
-    StatusBar
+    StatusBar,
+    AppRegistry,
+    Platform
 } from 'react-native';
 import { Provider } from 'react-redux'
 import LanguageLoader from 'react-native-language-loader';
@@ -14,7 +16,6 @@ import ErrorPopup from '../Misc/ErrorPopup/ErrorPopup';
 import Loader from './Loader/Loader';
 import { PersistGate } from 'redux-persist/integration/react'
 import {store,persistor} from '../Redux/Store';
-import {NativeModules} from 'react-native';
 
 const style = StyleSheet.create({
     container:{
@@ -44,8 +45,9 @@ export default class Main extends React.Component
     UNSAFE_componentWillMount = async()=>
     {
         await LanguageLoader.loadLanguagesAsync()
-        .then(languages=>JSON.parse(languages))
         .then(languages=>{
+            if(Platform.OS === 'android')
+                languages = JSON.parse(languages);
             store.dispatch({
                 type:'language::load',
                 languages
@@ -109,3 +111,5 @@ export default class Main extends React.Component
         );
     }
 }
+
+AppRegistry.registerComponent("Main",()=>Main);

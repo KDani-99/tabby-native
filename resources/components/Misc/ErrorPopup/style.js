@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet,Platform} from 'react-native';
 
 const style = StyleSheet.create(
     {
@@ -8,7 +8,7 @@ const style = StyleSheet.create(
             alignItems:'center',
             position:'absolute',
             width:'100%',
-            top:0,
+            top:Platform.OS === 'ios' ? 40 : 0,
             left:0,
             backgroundColor:'white',
             zIndex:100,
