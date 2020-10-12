@@ -50,6 +50,10 @@ pod install
 ```js
   npm i
 ```
+```js
+  cd ios/
+  pod install
+```
 2. Link fonts
 ```js
   react-native link
