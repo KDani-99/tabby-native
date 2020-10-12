@@ -12,7 +12,7 @@ import Button from '../../Misc/Buttons/Button';
 import CommonStyle from '../../Misc/CommonStyle';
 import style from './style';
 
-class Day extends React.Component
+class Activity extends React.Component
 {
     constructor()
     {
@@ -57,10 +57,10 @@ class Day extends React.Component
     }
 }
 
-AppRegistry.registerComponent("Day",()=>Day);
+AppRegistry.registerComponent("Activity",()=>Activity);
 
 const mapStateToProps = state =>({
     selectedTheme:state?.Main?.selectedTheme,
 });
 
-export default connect(mapStateToProps)(Day);
+export default connect(mapStateToProps)(Activity);
