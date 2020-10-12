@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    AppRegistry
 } from 'react-native';
 
 import CommonStyle from '../CommonStyle';
@@ -15,5 +16,7 @@ const Header = (props)=>{
         </View>
     )
 };
+
+AppRegistry.registerComponent('Header',()=>Header);
 
 export default Header;

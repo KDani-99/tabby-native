@@ -1,12 +1,15 @@
 import React from 'react';
 import {
     View, 
-    Text
+    Text,
+    AppRegistry
 } from 'react-native';
 
 import style from './style';
 
 import Activity from '../Activity/Activity';
+
+AppRegistry.registerComponent('Day',()=>Day)
 
 export default class Day extends React.Component
 {

@@ -7,6 +7,8 @@ import {
 import style from './style';
 import { Icon } from 'react-native-eva-icons';
 
+AppRegistry.registerComponent('EmptyPage',()=>EmptyPage);
+
 export default class EmptyPage extends React.Component
 {
     render()

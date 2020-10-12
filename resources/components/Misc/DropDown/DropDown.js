@@ -2,7 +2,8 @@ import React from 'react';
 import {
     View,
     Text,
-    ScrollView
+    ScrollView,
+    AppRegistry
 } from 'react-native';
 
 import style from './style';
@@ -64,5 +65,7 @@ const DropDownItem = (props)=>{
         
     );
 };
+
+AppRegistry.registerComponent('DropDown',()=>DropDown);
 
 export default Dropdown;

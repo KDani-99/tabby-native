@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     View,
-    Text
+    Text,
+    AppRegistry
 } from 'react-native';
 import * as Progress from 'react-native-progress';
 import {version} from '../../../settings/settings.json';
@@ -16,5 +17,7 @@ const Loader = () => {
         </View>
     );
 };
+
+AppRegistry.registerComponent('Loader',()=>Loader);
 
 export default Loader;

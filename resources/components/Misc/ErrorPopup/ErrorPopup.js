@@ -3,7 +3,8 @@ import {
     Animated,
     View,
     Text,
-    Easing
+    Easing,
+    AppRegistry
 } from 'react-native';
 import { Icon } from 'react-native-eva-icons';
 import style from './style';
@@ -66,3 +67,4 @@ export default class ErrorPopup extends React.Component
         );
     }
 }
+AppRegistry.registerComponent('ErrorPopup',()=>ErrorPopup);
