@@ -12,7 +12,6 @@ import { Icon } from 'react-native-eva-icons';
 import Header from '../../Misc/Header/Header';
 import Ripple from 'react-native-material-ripple';
 import { connect } from 'react-redux';
-import Button from '../../Misc/Buttons/Button';
 
 class AddTaskPanel extends React.Component
 {
