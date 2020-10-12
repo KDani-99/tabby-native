@@ -24,7 +24,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-language-loader": "^1.2.4",
     "react-native-material-ripple": "^0.9.1",
-    "react-native-material-textfield": "^0.16.1",
+    "react-native-material-textfield": "https://github.com/TheLartians/react-native-material-textfield.git#147f3b92b24cb3404c3b4a0229b3da30b81e2c7e",
     "react-native-nested-scroll-view": "^9.0.0",
     "react-native-progress": "^4.0.3",
     "react-native-svg": "^11.0.1",
