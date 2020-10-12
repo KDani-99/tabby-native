@@ -9,7 +9,7 @@
 import React from 'react';
 
 import Main from './resources/components/Main/Main';
-
+import { AppRegistry } from 'react-native';
 
 const App: () => React$Node = () => {
   //console.disableYellowBox = true;
@@ -19,5 +19,7 @@ const App: () => React$Node = () => {
     </>
   );
 };
+
+AppRegistry.registerComponent('tabby',()=>App);
 
 export default App;
