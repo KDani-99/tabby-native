@@ -3,8 +3,7 @@ import {
     View,
     StyleSheet,
     StatusBar,
-    AppRegistry,
-    Platform
+    AppRegistry
 } from 'react-native';
 import { Provider } from 'react-redux'
 import LanguageLoader from 'react-native-language-loader';
@@ -46,8 +45,6 @@ export default class Main extends React.Component
     {
         await LanguageLoader.loadLanguagesAsync()
         .then(languages=>{
-            if(Platform.OS === 'android')
-                languages = JSON.parse(languages);
             store.dispatch({
                 type:'language::load',
                 languages
