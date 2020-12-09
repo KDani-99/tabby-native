@@ -1,10 +1,10 @@
 ## Tabby-native
 
-Tabby electron app Native port made with **React Native**
+Tabby electron app for mobile devices made with **React Native**
 
-(Build is available for **Android** & **Iphone** ***(Not tested on physical device)***)
+(Build is available for **Android** & **Iphone**)
 
-Desktop version (Windows and Mac)
+Desktop version (**Windows** & **MacOS**)
 https://github.com/natixco/tabby
 
 ## Important
