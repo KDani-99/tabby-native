@@ -18,7 +18,7 @@
     "create-react-class": "^15.6.3",
     "eva-icons": "^1.1.2",
     "mem": "^6.0.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-native": "0.63.3",
